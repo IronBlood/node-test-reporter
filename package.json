@@ -1,0 +1,12 @@
+{
+	"name": "@ironblood/node-test-reporter",
+	"version": "0.0.1",
+	"main": "src/index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Yang Shen <aplshenyang@gmail.com> (https://github.com/IronBlood)",
+	"license": "MIT",
+	"description": ""
+}
