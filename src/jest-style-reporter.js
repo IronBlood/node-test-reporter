@@ -5,33 +5,13 @@
  */
 
 import { Transform } from "node:stream";
-import { relative, isAbsolute } from "node:path";
 import { colors } from "./colors.js";
 import { format_error } from "./error.js";
-
-const CWD_PREFIX = process.cwd();
-/**
- * @param {string} p
- */
-const rel = (p) => isAbsolute(p) ? relative(CWD_PREFIX, p) : p;
-
-/** @type {Map<any, string>} */
-const indentMemo = new Map();
-function indent(nesting) {
-	let value = indentMemo.get(nesting);
-	if (value === undefined) {
-		value = '  '.repeat(nesting);
-		indentMemo.set(nesting, value);
-	}
-	return value;
-}
-
-const reporter_unicode_symbol_map = {
-	"__proto__": null,
-	"test:fail": "\u2715",
-	"test:pass": "\u2713",
-	"test:skip": "\u25CB",
-};
+import {
+	rel,
+	indent,
+	reporter_unicode_symbol_map,
+} from "./utils.js";
 
 /** @type {Event[]} */
 const event_buffer = [];

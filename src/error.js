@@ -1,7 +1,10 @@
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
-import { relative } from "node:path";
 import { colors } from "./colors.js";
+import {
+	rel,
+	reporter_unicode_symbol_map,
+} from "./utils.js";
 
 /**
  * @param {import("./types").TestReporterEventTreeNode?} node
@@ -18,8 +21,8 @@ const format_header = (node, indent) => {
 		" ".repeat(indent),
 		colors.bold,
 		colors.red,
-		"\u25cf ", // dot ●
-		buf.reverse().join(" \u203a "), // ›
+		`${reporter_unicode_symbol_map.dot} `,
+		buf.reverse().join(` ${reporter_unicode_symbol_map.gt} `),
 		colors.reset,
 	].join("");
 };
@@ -79,7 +82,7 @@ const format_meta = (stack, default_indent = 0) => {
 		return "";
 
 	const abs = fileURLToPath(match[1]);
-	const filename = relative(process.cwd(), abs);
+	const filename = rel(abs);
 	const line = +match[2] - 1;   // 1-based -> 0-based index
 	const column = +match[3] - 1; // 1-based -> 0-based index
 
@@ -145,5 +148,4 @@ export const format_error = (node) => {
 		meta,
 		"", // empty line
 	].join("\n");
-
 };
