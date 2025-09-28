@@ -1,10 +1,42 @@
 {
 	"name": "@ironblood/node-test-reporter",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"main": "src/index.js",
+	"exports": "./src/index.js",
 	"type": "module",
+	"types": "src/types.d.ts",
+	"files": [
+		"src/colors.js",
+		"src/error.js",
+		"src/index.js",
+		"src/jest-style-reporter.js",
+		"src/types.d.ts",
+		"src/utils.js"
+	],
 	"scripts": {
+		"dev": "node --test --test-reporter=./src/index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/IronBlood/node-test-reporter.git"
+	},
+	"homepage": "https://github.com/IronBlood/node-test-reporter#readme",
+	"bugs": {
+		"url": "https://github.com/IronBlood/node-test-reporter/issues"
+	},
+	"keywords": [
+		"node",
+		"test",
+		"reporter",
+		"jest"
+	],
+	"engines": {
+		"node": ">=18.0.0 || ^16.17.0"
+	},
+	"publishConfig": {
+		"provenance": true,
+		"access": "public"
 	},
 	"author": "Yang Shen <aplshenyang@gmail.com> (https://github.com/IronBlood)",
 	"license": "MIT",
