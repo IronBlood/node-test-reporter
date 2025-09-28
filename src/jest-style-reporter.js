@@ -1,7 +1,7 @@
 /**
- * @typedef {import("./test-reporter").TestReporterEventTreeNode} TreeNode
- * @typedef {import("./test-reporter").TestReportSummary} Summary
- * @typedef {import("./test-reporter").TestReporterEvent} Event
+ * @typedef {import("./types").TestReporterEventTreeNode} TreeNode
+ * @typedef {import("./types").TestReportSummary} Summary
+ * @typedef {import("./types").TestReporterEvent} Event
  */
 
 import { Transform } from "node:stream";

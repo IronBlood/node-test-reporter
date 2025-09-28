@@ -4,7 +4,7 @@ import { relative } from "node:path";
 import { colors } from "./colors.js";
 
 /**
- * @param {import("./test-reporter").TestReporterEventTreeNode?} node
+ * @param {import("./types").TestReporterEventTreeNode?} node
  * @param {number} indent
  */
 const format_header = (node, indent) => {
@@ -126,7 +126,7 @@ const format_meta = (stack, default_indent = 0) => {
 };
 
 /**
- * @param {import("./test-reporter").TestReporterEventTreeNode} node
+ * @param {import("./types").TestReporterEventTreeNode} node
  * @returns {string}
  */
 export const format_error = (node) => {

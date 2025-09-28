@@ -263,7 +263,7 @@ function getCoverageReport(pad, summary, symbol, color, table) {
 		return result;
 	}
 
-	/** @type {import("./test-reporter.d.ts").WriteReportLineFn} */
+	/** @type {import("./types").WriteReportLineFn} */
 	function writeReportLine({ file, depth = 0, coveragesColumns, fileCoverage, uncoveredLines }) {
 		const fileColumn = `${prefix}${' '.repeat(depth)}${getCell(file, filePadLength - depth, "PadEnd", truncateStart, fileCoverage)}`;
 		const coverageColumns = coveragesColumns.map((coverage, j) => {
@@ -389,7 +389,7 @@ class SpecLite extends Transform {
 
 	/**
 	 * @param {string} type
-	 * @param {import("./test-reporter.d.ts").TestReporterData} data
+	 * @param {import("./types").TestReporterData} data
 	 */
 	#handleTestReportEvent(type, data) {
 		const subtest = this.#stack.shift();
