@@ -1,3 +1,3 @@
-import SpecLite from "./test-reporter.js";
+import JestStyleReporter from "./jest-style-reporter.js";
 
-export default SpecLite;
+export default JestStyleReporter;
