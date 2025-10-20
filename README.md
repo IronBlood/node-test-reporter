@@ -1,5 +1,7 @@
 # node-test-reporter
 
+> Note: only supports v22.x and later versions
+
 This is a lightweight custom reporter for Node's built-in test runner, which was introduced in v18.0.0 and v16.17.0. This reporter adaptes the Jest-style, which is shown in the snapshot below. However this is a hobby project, lots of features, like snapshots, diff highlighter are not implemented. For serious projects, use Mocha, Jest, or Vitest, or even the built-in reporters from `node:test`.
 
 ![snapshot.png](./assets/snapshot.png)
