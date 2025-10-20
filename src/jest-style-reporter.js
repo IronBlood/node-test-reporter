@@ -76,7 +76,7 @@ const format_file_report = (filename) => {
 		const { data, type } = node.event;
 		const { todo, skip } = data;
 
-		if (data.details.type) {
+		if (data.details.type === "suite") {
 			chunks.push(`${indent(1 + data.nesting)}${data.name}`);
 			node.children.forEach(c => dfs(c));
 		} else {
