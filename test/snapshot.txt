@@ -1,4 +1,4 @@
-[42m[30m[1m PASS [0m dummy.1.test.js
+[42m[30m[1m PASS [0m test/dummy.test.js
   suite
     [32m✓[0m test [90m(0 ms)[0m
 
