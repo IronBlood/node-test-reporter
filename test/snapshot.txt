@@ -1,0 +1,7 @@
+[42m[30m[1m PASS [0m dummy.1.test.js
+  suite
+    [32m✓[0m test [90m(0 ms)[0m
+
+[1mTest Suites:[0m [32m[1m2 passed[0m, 1 total
+[1mTests:      [0m 1 total
+[1mTime:       [0m 0.043 s[0m
