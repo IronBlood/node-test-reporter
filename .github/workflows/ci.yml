@@ -21,4 +21,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm run --silent dev test/dummy.test.js 1>test/snapshot.ci.txt
+        env:
+          FORCE_COLOR: "1"
       - run: node --test test/index.js
