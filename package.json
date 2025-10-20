@@ -1,6 +1,6 @@
 {
 	"name": "@ironblood/node-test-reporter",
-	"version": "0.1.0",
+	"version": "0.0.0",
 	"main": "src/index.js",
 	"exports": "./src/index.js",
 	"type": "module",
